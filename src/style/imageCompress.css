@@ -1,0 +1,9 @@
+.icon {
+    width: 102px;
+    height: 92px;
+    background-position: -30px -196px;
+    background-repeat: no-repeat;
+    background-size: 960px;
+    background-image: url(https://tinypng.com/images/sprite.svg);
+    margin: 28px auto 12px;
+}

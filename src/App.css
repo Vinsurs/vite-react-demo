@@ -1,0 +1,37 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+/* 页面切换动画 */
+.page-enter {
+  opacity: 0;
+  transform: translateX(50%);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.page-exit {
+  opacity: 1;
+  transform: translateX(0)
+}
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.page-enter-active,
+.page-exit-active {
+  transition: opacity 800ms, transform 500ms;
+}
+/* 按钮 */
+:root button {
+  color: #ffffff;
+  padding: 4px 8px;
+  background-color: rgba(19, 136, 219, 1);
+  appearance: none;
+  border-radius: 6px;
+}
+:root button:active {
+  background-color: rgba(14, 118, 210, 0.7);
+  outline: 1px solid rgb(13, 14, 15);
+}
