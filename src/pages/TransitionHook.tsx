@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTransition, Transition, useSwitchTransition, SwitchTransition, useListTransition, ListTransition } from "transition-hook"
 
 export default function TransitionHook() {
@@ -58,6 +58,7 @@ export default function TransitionHook() {
             <section>
                 <h3>Transition使用</h3>
                 <button onClick={() => SetOn(!on)}>切换</button>
+                {/* @ts-ignore */}
                 <Transition state={on} timeout={300}>
                     {
                         (stage, shouldMount) => (
@@ -104,6 +105,7 @@ export default function TransitionHook() {
             <section>
                 <h3>SwitchTransition使用</h3>
                 <button onClick={() => setSwitchValue(switchValue + 1)}>开始动画</button>
+                {/* @ts-ignore */}
                 <SwitchTransition state={switchValue} timeout={300} mode="out-in">
                     {
                         (state, stage) => {
@@ -156,6 +158,7 @@ export default function TransitionHook() {
                 <h3>ListTransition使用</h3>
                 <button onClick={() => handleListAdd()}>添加人员</button>
                 <ul className="list-none">
+                    {/* @ts-ignore */}
                     <ListTransition list={list} timeout={300}> 
                         {
                             (item, stage) => (

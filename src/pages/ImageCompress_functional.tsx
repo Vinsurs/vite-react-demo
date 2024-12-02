@@ -1,5 +1,5 @@
-import React, { useRef, useState, ChangeEvent } from "react";
-import { filesize, compressImage, fileToBase64, download, sleep } from "../utils/file"
+import { useRef, useState, ChangeEvent } from "react";
+import { filesize, compressImage, fileToBase64, download } from "../utils/file"
 import "../style/imageCompress.css"
 
 type ICompressedFile = {

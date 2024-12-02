@@ -1,4 +1,4 @@
-import React, { Fragment, ForwardRefRenderFunction, useState, useRef, useImperativeHandle, forwardRef, useEffect } from "react";
+import { Fragment, ForwardRefRenderFunction, useState, useRef, useImperativeHandle, forwardRef, useEffect } from "react";
 
 type IProps = {
     /** 起始值, 默认0 */

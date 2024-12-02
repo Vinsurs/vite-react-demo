@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import CounTo, { IExposed } from "/@/components/CountTo"
 
 export default function CountTo() {

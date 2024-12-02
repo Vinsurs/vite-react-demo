@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useBroadcastChannelContext } from "../context/broadcastchannel";
 
 export default function GoodsList() {

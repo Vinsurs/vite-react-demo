@@ -1,5 +1,5 @@
 import React from "react";
-import { filesize, compressImage, fileToBase64, download, sleep } from "../utils/file"
+import { filesize, compressImage, fileToBase64, download } from "../utils/file"
 import "../style/imageCompress.css"
 
 type ICompressedFile = {
@@ -34,16 +34,16 @@ export default class ImageCompress extends React.Component<unknown, IState> {
         } 
     }
     componentDidMount(): void {
-        document.addEventListener("paste", this.handlePaste, false)
+        document.addEventListener("paste", this.handlePaste as any, false)
     }
     componentWillUnmount(): void {
-        document.removeEventListener("paste", this.handlePaste, false)
+        document.removeEventListener("paste", this.handlePaste as any, false)
     }
     handleWriteClipboard = () => {
         navigator.clipboard.writeText("写入文本").then(() => console.log("写入成")).catch(console.info)
     }
     handleReadClipboard = () => {
-        navigator.permissions.query({ name: "clipboard-read" }).then(status => {
+        navigator.permissions.query({ name: "clipboard-read" as any }).then(status => {
             if (status.state === "granted" || status.state === "prompt") {
                 navigator.clipboard.read().then(items => {
                     console.log("items", items)
